@@ -17,11 +17,11 @@ function type() {
 
     if (!isDeleting && charIndex === currentWord.length) {
         isDeleting = true;
-        setTimeout(type, 2000); // Pause at end
+        setTimeout(type, 4000); // Pause at end
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
-        setTimeout(type, 500);
+        setTimeout(type, 600);
     } else {
         setTimeout(type, isDeleting ? 100 : 200);
     }
