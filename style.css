@@ -337,6 +337,7 @@ footer { text-align: center; padding: 40px; border-top: 1px solid var(--card-bg)
     .hero-content h3 { font-size: 1.2rem; }
     .hero-content p { font-size: 0.95rem; }
     .hero-btns { justify-content: center; flex-wrap: wrap; }
+    .social-links { justify-content: center; }
     .hero-img img { width: 250px; height: 250px; }
     
     /* About Section */
@@ -366,6 +367,7 @@ footer { text-align: center; padding: 40px; border-top: 1px solid var(--card-bg)
         font-size: 0.9rem; 
         text-align: left;
     }
+    .exp-img { justify-content: center; }
     .exp-img img {
         width: 100%;
         max-width: 300px;
