@@ -59,6 +59,27 @@ section { padding: 100px 10%; min-height: 100vh; }
     border: 3px solid var(--bright-purple); box-shadow: 0 10px 30px rgba(147, 112, 255, 0.3);
 }
 
+/* Education Section */
+.subsection-title { 
+    text-align: center; 
+    font-size: 2rem; 
+    margin: 60px auto 40px; 
+    color: var(--white);
+    max-width: 1200px;
+}
+.education-container {
+    display: flex; align-items: center; gap: 30px; max-width: 1200px; margin: 0 auto;
+}
+.education-text { flex: 1; }
+.college-name { font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 10px; }
+.degree { font-size: 1rem; color: var(--text-color); line-height: 1.8; }
+.college-date { font-size: 0.79rem; color: var(--white); margin-top: 10px; font-weight: 500; }
+.education-img { flex: 1; display: flex; justify-content: center; }
+.education-img img {
+    width: 490px; height: 400px; border-radius: 15px; object-fit: cover;
+    border: 3px solid var(--bright-purple); box-shadow: 0 10px 30px rgba(147, 112, 255, 0.3);
+}
+
 /* Experience Section */
 .experience-container {
     display: flex; align-items: flex-start; gap: 50px; max-width: 1200px; margin: 0 auto;
@@ -349,6 +370,24 @@ footer { text-align: center; padding: 40px; border-top: 1px solid var(--card-bg)
     .about-text { text-align: center; }
     .about-text p { font-size: 0.95rem; }
     .about-img img {
+        width: 100%;
+        max-width: 300px;
+        height: 280px;
+    }
+    
+    /* Education Section */
+    .subsection-title { 
+        font-size: 1.5rem; 
+        margin: 40px auto 30px;
+    }
+    .education-container {
+        flex-direction: column;
+        gap: 30px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .education-text { text-align: center; }
+    .education-img img {
         width: 100%;
         max-width: 300px;
         height: 280px;
