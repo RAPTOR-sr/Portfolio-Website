@@ -48,10 +48,13 @@ function updateActiveLink() {
 
     window.addEventListener('scroll', () => {
         let current = '';
+        
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - 300) {
+            const sectionBottom = sectionTop + section.clientHeight;
+            
+            // Check if viewport center is within section
+            if (pageYOffset + window.innerHeight / 2 >= sectionTop && pageYOffset + window.innerHeight / 2 < sectionBottom) {
                 current = section.getAttribute('id');
             }
         });
