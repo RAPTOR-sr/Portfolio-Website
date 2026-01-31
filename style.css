@@ -107,7 +107,10 @@ section { padding: 100px 10%; min-height: 100vh; }
 .hero-btns { margin-top: 30px; display: flex; gap: 20px; }
 
 .btn {
-    padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 600; transition: 0.4s;
+    padding: 12px 30px; border-radius: 999px; text-decoration: none; font-weight: 600; transition: 0.4s;
+    font-size: 1rem;
+    min-width: 150px;
+    text-align: center;
 }
 .primary { background: var(--accent-color); color: white; }
 .secondary { border: 2px solid var(--accent-color); color: white; }
