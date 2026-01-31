@@ -89,6 +89,19 @@ section { padding: 100px 10%; min-height: 100vh; }
     width: 490px; height: 350px; border-radius: 15px; object-fit: cover;
     border: 3px solid var(--bright-purple); box-shadow: 0 10px 30px rgba(147, 112, 255, 0.3);
 }
+
+/* Ensure second internship image fits nicely */
+.exp-img-fit {
+    width: 350px !important;
+    height: 350px !important;
+    object-fit: contain !important;
+    background: #fff;
+    border-radius: 15px;
+    border: 3px solid var(--bright-purple);
+    box-shadow: 0 10px 30px rgba(147, 112, 255, 0.3);
+    display: block;
+    margin: 0 auto;
+}
 .exp-text { flex: 1; }
 .exp-text h3 { font-size: 1.8rem; margin-bottom: 10px; color: var(--bright-purple); }
 .company-name { font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 5px; }
