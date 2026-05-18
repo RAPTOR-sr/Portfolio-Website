@@ -5,11 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shivansh Rajput | AI & ML Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+    <!-- ─── PAGE LOADER ─────────────────────── -->
+    <div id="page-loader">
+        <div class="loader-inner">
+            <div class="loader-logo">SR.</div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── CUSTOM CURSOR ───────────────────── -->
+    <div id="cursor-orb"></div>
+    <div id="cursor-trail"></div>
+
+    <!-- ─── BACKGROUND CANVAS ───────────────── -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- ─── NAVIGATION ──────────────────────── -->
     <nav>
         <div class="logo">SR<span>.</span></div>
         <ul class="nav-links">
@@ -21,6 +39,7 @@
         </ul>
     </nav>
 
+    <!-- ─── HERO ─────────────────────────────── -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Hi, I'm <span class="highlight">Shivansh Rajput</span></h1>
@@ -35,19 +54,19 @@
             </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/shivansh-rajput-781373117/" target="_blank" title="LinkedIn">
-                    <img src="icons\linkedin-original.svg" alt="LinkedIn" class="social-icon">
+                    <img src="icons\linkedin-color-svgrepo-com.svg" alt="LinkedIn" class="social-icon">
                 </a>
                 <a href="https://github.com/RAPTOR-sr" target="_blank" title="GitHub">
-                    <img src="icons/github.svg" alt="GitHub" class="social-icon">
+                    <img src="icons\github-color-svgrepo-com.svg" alt="GitHub" class="social-icon">
                 </a>
             </div>
-
         </div>
         <div class="hero-img">
             <img src="image\Picsart_25-07-31_23-28-48-852 (1).jpg" alt="Shivansh Rajput">
         </div>
     </section>
 
+    <!-- ─── ABOUT ─────────────────────────────── -->
     <section id="about" class="about">
         <h2 class="section-title">About Me</h2>
         <div class="about-container">
@@ -56,7 +75,6 @@
             </div>
             <div class="about-text">
                 <p>I am a Computer Science student specializing in Artificial Intelligence and Machine Learning, with strong experience in computer vision, gesture recognition, and LLM-based applications. I enjoy building high-accuracy, real-time AI solutions using Python, TensorFlow, PyTorch, and NLP to solve meaningful real-world problems</p>
-                
             </div>
         </div>
 
@@ -73,6 +91,7 @@
         </div>
     </section>
 
+    <!-- ─── EXPERIENCE ────────────────────────── -->
     <section id="experience" class="experience">
         <h2 class="section-title">Experience</h2>
         <div class="experience-container">
@@ -93,6 +112,7 @@
         </div>
     </section>
 
+    <!-- ─── SKILLS ─────────────────────────────── -->
     <section id="skills" class="skills">
         <h2 class="section-title">Technical Skills</h2>
         <div class="skills-grid">
@@ -182,7 +202,7 @@
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
                     </div>
                     <div class="skill-icon" title="GitHub">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                        <img src="icons\github-color-svgrepo-com.svg" alt="GitHub">
                     </div>
                     <div class="skill-icon" title="VS Code">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
@@ -192,6 +212,7 @@
         </div>
     </section>
 
+    <!-- ─── PROJECTS ──────────────────────────── -->
     <section id="projects" class="projects">
         <h2 class="section-title">Featured Projects</h2>
         <div class="project-grid">
@@ -217,6 +238,7 @@
         </div>
     </section>
 
+    <!-- ─── CONTACT ───────────────────────────── -->
     <section id="contact" class="contact">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-container">
@@ -232,8 +254,9 @@
         </div>
     </section>
 
+    <!-- ─── FOOTER ─────────────────────────────── -->
     <footer>
-        <p>Built with ❤️ By Shivansh Rajput — with AI assistance.</p>
+        <p>Built with ❤️ By Shivansh Rajput — with Vibe coding.</p>
         <p>Copyright © 2026 SirRAPTOR</p>
     </footer>
 
