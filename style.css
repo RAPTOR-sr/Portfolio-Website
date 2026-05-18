@@ -1,8 +1,3 @@
-/* ============================================
-   SHIVANSH RAJPUT — CYBER NEON PORTFOLIO THEME
-   Premium Dark + Neon Blue/Red Aesthetic
-   ============================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* ─── CSS VARIABLES ─────────────────────────── */
@@ -106,7 +101,7 @@ body.cursor-hover #cursor-trail {
   font-size: 4rem;
   font-weight: 700;
   background: var(--gradient-br);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: pulse-glow 1.2s ease-in-out infinite alternate;
 }
@@ -492,6 +487,21 @@ section {
   color: var(--text-muted);
 }
 
+#contact-form .btn:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background: var(--gradient-br) !important; /* Keeps its original primary background state */
+  color: #fff !important;
+}
+
+#contact-form .btn:hover::before {
+  opacity: 0 !important; /* Prevents the light white overlay gradient on hover */
+}
+
+.skill-card.reveal.visible {
+  transition-delay: 0s !important;
+  animation-delay: 0s !important;
+}
 .about-img { flex: 1; display: flex; justify-content: center; }
 
 .about-img img {
@@ -838,7 +848,7 @@ section {
 
 .project-card img {
   width: 100%;
-  height: 200px;
+  height: auto;
   object-fit: cover;
   transition: transform 0.5s ease;
   display: block;
