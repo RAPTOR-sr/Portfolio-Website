@@ -604,6 +604,10 @@ section {
   margin: 0 auto;
 }
 
+.experience-container:not(:last-child) {
+  margin-bottom: 80px;
+}
+
 .exp-img { flex: 1; display: flex; justify-content: center; }
 
 .exp-img img {
@@ -616,6 +620,39 @@ section {
 }
 
 .exp-img img:hover {
+  border-color: rgba(255, 45, 85, 0.5);
+  box-shadow: 0 0 40px rgba(255, 45, 85, 0.3);
+  transform: scale(1.02);
+}
+
+.exp-logo-container {
+  width: 460px;
+  height: 340px;
+  background: #000000;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  box-shadow: var(--glow-red);
+  transition: var(--transition);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.exp-logo-container img {
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  transform: none !important;
+}
+
+.exp-logo-container:hover {
   border-color: rgba(255, 45, 85, 0.5);
   box-shadow: 0 0 40px rgba(255, 45, 85, 0.3);
   transform: scale(1.02);
@@ -1006,6 +1043,7 @@ footer p + p { margin-top: 6px; }
   .about-container, .education-container, .experience-container { gap: 40px; }
   .about-img img, .education-img img { width: 100%; max-width: 380px; height: auto; }
   .exp-img img { width: 100%; max-width: 380px; height: auto; }
+  .exp-logo-container { width: 100%; max-width: 380px; height: 280px; padding: 20px; }
 }
 
 @media (max-width: 768px) {
@@ -1043,10 +1081,12 @@ footer p + p { margin-top: 6px; }
   .education-img img { width: 100%; max-width: 300px; height: 260px; }
 
   .experience-container { flex-direction: column; gap: 25px; max-width: 100%; }
+  .experience-container:not(:last-child) { margin-bottom: 50px; }
   .exp-text { text-align: center; }
   .exp-text li { text-align: left; font-size: 0.88rem; }
   .exp-img { justify-content: center; }
   .exp-img img { width: 100%; max-width: 300px; height: 260px; }
+  .exp-logo-container { width: 100%; max-width: 300px; height: 220px; padding: 15px; }
 
   .skills-grid, .project-grid { grid-template-columns: 1fr; gap: 18px; }
   .skill-card, .p-content { padding: 20px; }
@@ -1069,6 +1109,7 @@ footer p + p { margin-top: 6px; }
   .hero-img img { width: 190px; height: 190px; }
   .hero-btns { gap: 8px; }
   .btn { padding: 8px 14px; font-size: 0.7rem; }
+  .exp-logo-container { max-width: 260px; height: 180px; padding: 12px; }
 }
 
 /* ─── GLOW DIVIDERS ─────────────────────────── */

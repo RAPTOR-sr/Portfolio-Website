@@ -127,7 +127,17 @@ window.addEventListener('load', () => {
   const typingText = document.querySelector('.typing');
   if (!typingText) return;
 
-  const words = ['Machine Learning Developer', 'Data Science Enthusiast', 'AI Explorer'];
+  const words = [
+  "Software Engineer",
+  "Python Developer",
+  "AI Engineer",
+  "Cloud & DevOps Enthusiast",
+  "Machine Learning Engineer",
+  "Computer Vision Enthusiast",
+  "Problem Solver",
+  "Continuous Learner"
+  ];
+  
   let wordIndex = 0, charIndex = 0, isDeleting = false;
 
   function type() {
