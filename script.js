@@ -165,6 +165,27 @@ window.addEventListener('load', () => {
   type();
 })();
 
+/* ─── LENIS SMOOTH MOMENTUM SCROLL ───────────── */
+let lenis;
+if (typeof Lenis !== 'undefined') {
+  lenis = new Lenis({
+    duration: 1.3,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // smooth easeOutExpo
+    orientation: 'vertical',
+    gestureOrientation: 'vertical',
+    smoothWheel: true,
+    wheelMultiplier: 1.0,
+    touchMultiplier: 1.5,
+    infinite: false,
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+}
+
 /* ─── NAV SCROLL EFFECT & ACTIVE LINK ──────── */
 (function initNav() {
   const nav = document.querySelector('nav');
@@ -194,16 +215,27 @@ window.addEventListener('load', () => {
     });
   }
 
+  if (lenis) {
+    lenis.on('scroll', onScroll);
+  }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
 
-/* ─── SMOOTH SCROLL ─────────────────────────── */
+/* ─── SMOOTH SCROLL ANCHOR LINKS ─────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    if (!targetId || targetId === '#') return;
+    const target = document.querySelector(targetId);
+    if (!target) return;
+
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    if (lenis) {
+      lenis.scrollTo(target, { offset: -70, duration: 1.4 });
+    } else {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 });
 
